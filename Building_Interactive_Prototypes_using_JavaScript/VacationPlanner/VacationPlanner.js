@@ -6,49 +6,72 @@ var enterDays = document.getElementById("enterDays");
 
 enterDays.onclick = calculateDays;
 
-console.log("calculateDays was called");
+function calculateDays(){
 
- function calculateDays(){
+  var daysInput = document.getElementById("days");
 
-   console.log("On calculateDays function");
+  var days = daysInput.value;
 
-   var daysInput = document.getElementById("days");
+  var daysMessage = document.getElementById("daysMessage");
 
-   var days = daysInput.value;
+  if(days < 4){
+    daysMessage.innerHTML = "Corra, seu tempo é curto. Aproveite cada minuto como se fosse o último !";
+  }
+  else if(days < 7){
+    daysMessage.innerHTML = "Esqueça o trabalho, é hora de curtir e relaxar ! ";
+  }
+  else{
+    daysMessage.innerHTML = "Você tem tempo de sobra para aproveitar todas as atrações, se aventurar por lugares desconhecidos e porque não, descançar um pouco.";
+  }
 
-   console.log("Numero de dias informado = " + days);
+  var hours = days * 24;
 
-   var daysMessage = document.getElementById("daysMessage");
+  var minutes = hours * 60;
 
-    if(days < 4){
-       daysMessage.innerHTML = "Aproveite cada minuto de seu tempo !";
-    }
-    else if(days < 7){
-       daysMessage.innerHTML = "Curta todas as atrações e relaxe um pouco ! ";
-    }
-    else{
-       daysMessage.innerHTML = "Você terá tempo de sobra para aproveitar todas as atrações e relaxar!";
-     }
+  var seconds = minutes * 60;
 
-     var hours = days * 24;
+  var hoursMessage = document.getElementById("hoursMessage");
+  var minutesMessage = document.getElementById("minutesMessage");
+  var secondsMessage = document.getElementById("secondsMessage");
 
-     console.log(hours);
+  hoursMessage.innerHTML = "Sua aventura irá durar " + hours + " horas.";
+  minutesMessage.innerHTML = "Ou seja " + minutes + " minutos.";
+  secondsMessage.innerHTML = "O que dá " + seconds + " segundos de pura diversão !!!.";
 
-     var minutes = hours * 60;
+  var timingNext = document.getElementById("timingNext");
+  timingNext.removeAttribute("hidden");
 
-     console.log(minutes);
+  timingNext.onclick = function(){
+    document.getElementById("budgetSection").removeAttribute("hidden");
+  }
 
-     var seconds = minutes * 60;
+}
+var enterBudget = document.getElementById("enterBudget");
+enterBudget.onclick = calculateBudget;
 
-     console.log(seconds);
+function calculateBudget(){
+  var tripBudget = document.getElementById("tripBudget").value;
+
+  var tripExchangeMsg = document.getElementById("tripExchangeMsg");
+
+  var calcBudget = tripBudget/3.13;
+
+  tripExchangeMsg.innerHTML = "Você tem USD $" + calcBudget + " para sua viagem";
+
+  var BudgetPeerDay = calcBudget/days;
+
+  var dailyExchangeMsg = document.getElementById("dailyExchangeMsg");
+
+  dailyExchangeMsg.innerHTML = "Você poderá gastar até $" + BudgetPeerDay + " por dia";
+
+  var exchange10Msg = document.getElementById("exchange10Msg");
+
+  exchange10Msg.innerHTML = "Você irá gastar R$" + (3.13 * 10) + " em um item de 10 doláres";
+
+  exchange500Msg = document.getElementById("exchange500Msg");
+
+  exchange500Msg.innerHTML = "Você irá gastar R$" + (3.13 * 500) + " em um item de 500 doláres";
 
 
-     var hoursMessage = document.getElementById("hoursMessage");
-     var minutesMessage = document.getElementById("minutesMessage");
-     var secondsMessage = document.getElementById("secondsMessage");
 
-     hoursMessage.innerHTML = "Significa que você estará no Brasil por " + hours + " hours.";
-     minutesMessage.innerHTML = "Significa que você estará no Brasil por " + minutes + " minutes.";
-     secondsMessage.innerHTML = "Significa que você estará no Brasil por " + seconds + " seconds.";
-
- }
+}

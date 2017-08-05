@@ -2,42 +2,43 @@
 
  <html>
      <head>
-         <title>Vacation Planner</title>
+         <title>Mochilão</title>
+         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
          <link rel="stylesheet" type="text/css" href="VacationPlanner.css"/>
      </head>
 
      <body>
          <header>
-             <h1 id="greeting">Welcome to the New Zealand Vacation Planner</h1>
+             <h1 id="greeting">Bem vindo ao MochilãoWeb</h1>
          </header>
          <section>
-             <h2>Trip Timing</h2>
+             <h2>Tempo de Viagem</h2>
              <p id="error" class="error"></p>
-             <label for="days">How many days will you be traveling?</label>
-             <input id="days" type="text" placeholder="enter a number"> 
-             <button id="enterDays">enter</button>
+             <label for="days">Sua aventura irá durar quantos dias?</label>
+             <input id="days" type="text" placeholder="Informe um número">
+             <button id="enterDays">enviar</button>
 
              <p id="daysMessage"></p>
              <p id="hoursMessage"></p>
              <p id="minutesMessage"></p>
              <p id="secondsMessage"></p>
-             <button hidden class="next" id="timingNext">next</button>
+             <button hidden class="next" id="timingNext">próximo</button>
          </section>
 
          <section id="budgetSection" hidden>
-             <h2>Budget</h2>
-             <p>The currency in New Zealand is the <strong>New Zealand Dollar (NZD)</strong></p>
-             <p>Exchange rate: 1 USD = 1.45 NZD</p>
+             <h2>Despesas</h2>
+             <p>A moeda que você irá utilizar em sua aventura será <strong>o Dolar Americano (USD)</strong></p>
+             <p>Cotação da Moeda: 1 USD = R$3,13 reais </p>
              <p id="error" class="error"></p>
-             <label for="dailyBudget">Enter your total trip budget in USD:</label>
-             <input id="tripBudget" type="text" placeholder="enter a number">
+             <label for="dailyBudget">Infome o valor em reais do total disponível para a viagem:</label>
+             <input id="tripBudget" type="text" placeholder="Informe um número">
              <input type="button" value="enter" id="enterBudget">
 
              <p id="tripExchangeMsg"></p>
              <p id="dailyExchangeMsg"></p>
              <p id="exchange10Msg"></p>
              <p id="exchange500Msg"></p>
-             <button hidden id="budgetNext" class="next">next</button>
+             <button hidden id="budgetNext" class="next">próximo</button>
          </section>
         <script src = "VacationPlanner.js"></script>
      </body>

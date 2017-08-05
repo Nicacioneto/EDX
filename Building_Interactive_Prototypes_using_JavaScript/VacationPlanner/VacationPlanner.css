@@ -2,7 +2,7 @@ html{
      height: 100%;
  }
  body{
-     background: url("https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297426881001_5280178297001-vs.jpg?pubId=5104226627001&videoId=5280178297001");
+     background: url("images/backpacker0.jpg");
      background-size: 100% 100%;
      background-repeat: no-repeat;
      text-align: center;
@@ -17,7 +17,8 @@ html{
      display: inline;
  }
  body h1{
-     color: red;
+     font-style: italic;
+     color: black;
  }
 
  strong{
@@ -25,7 +26,8 @@ html{
  }
 
  section{
-     background-color: blue;
+     background-color: #4169E1;
+     opacity: 0.65;
      border: white 3px dotted;
      width: 80%;
      margin: 5px auto;
